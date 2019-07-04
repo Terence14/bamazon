@@ -2,7 +2,7 @@
 
 var mysql = require("mysql");
 var inquire = require("inquirer");
-var Table = require("cli-table")
+
 
 // create connection witgh mysql
 var connnection = mysql.createConnection({
@@ -34,7 +34,7 @@ var displayProducts = function(){
 		});
 		for(var i = 0; i < res.length; i++){
 			displayTable.push(
-				[res[i].item_id,res[i].product_name, res[i].department_name, res[i].price, res[i].stock_quantity]
+				[res[i].item_id,res[i].product_name, res[i].catergory, res[i].price, res[i].quantity]
 				);
 		}
 		console.log(displayTable.toString());
